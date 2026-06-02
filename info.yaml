@@ -1,11 +1,8 @@
 project:
-  title: "AXI4-Stream Receiver"
-  author: "Your Name"
-  discord: "your_discord"
-  description: "Simple AXI4-Stream receiver for Tiny Tapeout"
+  title: "AXI4 Stream RX"
+  author: "your_name"
+  description: "Simple AXI4-Stream receiver"
   language: "Verilog"
-  clock_hz: 10000000
-
   tiles: "1x1"
 
   top_module: "tt_um_axis_rx"
