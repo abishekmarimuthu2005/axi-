@@ -1,14 +1,17 @@
 project:
-  title: "AXI4 Stream RX"
-  author: "your_name"
-  description: "Simple AXI4-Stream receiver"
+  title: "AXI4-Stream Receiver"
+  author: "Abishek"
+  discord: ""
+  description: "Simple AXI4-Stream style receiver using 8-bit data input."
   language: "Verilog"
+  clock_hz: 1000000
+
   tiles: "1x1"
 
-  top_module: "tt_um_axis_rx"
+  top_module: "tt_um_axi_rx"
 
   source_files:
-    - src/tt_um_axis_rx.v
+    - "project.v"
 
 pinout:
   ui[0]: "TDATA[0]"
@@ -20,17 +23,17 @@ pinout:
   ui[6]: "TDATA[6]"
   ui[7]: "TDATA[7]"
 
-  uo[0]: "RX[0]"
-  uo[1]: "RX[1]"
-  uo[2]: "RX[2]"
-  uo[3]: "RX[3]"
-  uo[4]: "RX[4]"
-  uo[5]: "RX[5]"
-  uo[6]: "RX[6]"
-  uo[7]: "RX[7]"
+  uo[0]: "RX_DATA[0]"
+  uo[1]: "RX_DATA[1]"
+  uo[2]: "RX_DATA[2]"
+  uo[3]: "RX_DATA[3]"
+  uo[4]: "RX_DATA[4]"
+  uo[5]: "RX_DATA[5]"
+  uo[6]: "RX_DATA[6]"
+  uo[7]: "RX_DATA[7]"
 
-  uio[0]: "TVALID"
-  uio[1]: "TREADY"
+  uio[0]: ""
+  uio[1]: ""
   uio[2]: ""
   uio[3]: ""
   uio[4]: ""
