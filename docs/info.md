@@ -1,20 +1,25 @@
-<!---
-
-This file is used to generate your project datasheet. Please fill in the information below and delete any unused
-sections.
-
-You can also include images in this folder and reference them in the markdown. Each image must be less than
-512 kb in size, and the combined size of all images must be less than 1 MB.
--->
+# AXI4-Stream Receiver
 
 ## How it works
 
-Explain how your project works
+This project implements a simple AXI4-Stream receiver.
+
+The receiver accepts 8-bit data on `ui_in[7:0]`.
+`uio_in[0]` is used as `TVALID` and `uio_out[0]` is used as `TREADY`.
+
+Whenever `TVALID` and `TREADY` are both high on a rising clock edge, the incoming byte is captured and stored. The received byte is displayed on `uo_out[7:0]`.
 
 ## How to test
 
-Explain how to use your project
+1. Apply reset (`rst_n = 0`).
+2. Release reset (`rst_n = 1`).
+3. Drive a byte on `ui_in[7:0]`.
+4. Assert `TVALID` on `uio_in[0]`.
+5. Wait for a clock edge.
+6. Verify the received value appears on `uo_out[7:0]`.
 
-## External hardware
+Example:
 
-List external hardware used in your project (e.g. PMOD, LED display, etc), if any
+- Send `8'h55`
+- Assert `TVALID`
+- Verify `uo_out == 8'h55`
