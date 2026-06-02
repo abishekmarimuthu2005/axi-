@@ -1,18 +1,18 @@
 project:
   title: "AXI4-Stream Receiver"
-  author: "Abishek"
+  author: "Your Name"
   discord: "your_discord"
-  description: "Simple AXI4-Stream slave receiver for Tiny Tapeout"
+  description: "Simple AXI4-Stream receiver for Tiny Tapeout"
   language: "Verilog"
   clock_hz: 10000000
 
   tiles: "1x1"
 
   top_module: "tt_um_axis_rx"
-  
-source_files:
-  - src/tt_um_axis_rx.v
-  
+
+  source_files:
+    - src/tt_um_axis_rx.v
+
 pinout:
   ui[0]: "TDATA[0]"
   ui[1]: "TDATA[1]"
@@ -23,14 +23,14 @@ pinout:
   ui[6]: "TDATA[6]"
   ui[7]: "TDATA[7]"
 
-  uo[0]: "RX_DATA[0]"
-  uo[1]: "RX_DATA[1]"
-  uo[2]: "RX_DATA[2]"
-  uo[3]: "RX_DATA[3]"
-  uo[4]: "RX_DATA[4]"
-  uo[5]: "RX_DATA[5]"
-  uo[6]: "RX_DATA[6]"
-  uo[7]: "RX_DATA[7]"
+  uo[0]: "RX[0]"
+  uo[1]: "RX[1]"
+  uo[2]: "RX[2]"
+  uo[3]: "RX[3]"
+  uo[4]: "RX[4]"
+  uo[5]: "RX[5]"
+  uo[6]: "RX[6]"
+  uo[7]: "RX[7]"
 
   uio[0]: "TVALID"
   uio[1]: "TREADY"
