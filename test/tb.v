@@ -10,7 +10,7 @@ module tb ();
   initial begin
     $dumpfile("tb.fst");
     $dumpvars(0, tb);
-    #1; 
+    #1;
   end
 
   // Wire up the inputs and outputs:
@@ -28,7 +28,7 @@ module tb ();
 `endif
 
   // Replace tt_um_example with your module name:
-  tt_um_axi_rx user_project  (
+  tt_um_kamales_axi_rx user_project  (
 
       // Include power ports for the Gate Level test:
 `ifdef GL_TEST
